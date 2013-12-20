@@ -87,10 +87,10 @@ export ARM_AR=$(xcrun -find -sdk iphoneos ar)
 export ARM_LD=$(xcrun -find -sdk iphoneos ld)
 
 export ARM_CFLAGS="-arch armv7"
-export ARM_CFLAGS="$ARM_CFLAGS -pipe -no-cpp-precomp"
+export ARM_CFLAGS="$ARM_CFLAGS -pipe -no-cpp-precomp -I$KIVYIOSROOT/../iOS-static-libs/iPhoneOS-V7-4.3/include/"
 export ARM_CFLAGS="$ARM_CFLAGS -isysroot $IOSSDKROOT"
 export ARM_CFLAGS="$ARM_CFLAGS -miphoneos-version-min=$SDKVER"
-export ARM_LDFLAGS="-arch armv7 -isysroot $IOSSDKROOT"
+export ARM_LDFLAGS="-arch armv7 -isysroot $IOSSDKROOT -L$KIVYIOSROOT/../iOS-static-libs/iPhoneOS-V7-4.3/lib"
 export ARM_LDFLAGS="$ARM_LDFLAGS -miphoneos-version-min=$SDKVER"
 
 # uncomment this line if you want debugging stuff
